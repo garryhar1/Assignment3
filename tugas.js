@@ -7,8 +7,8 @@ function DG(ar) {
     return true
   }
   
-console.log(DG([1, 3, 5, 7]))
-console.log(DG([1, 3, 5, 6, 7, 9]))
+// console.log(DG([1, 3, 5, 7]))
+// console.log(DG([1, 3, 5, 6, 7, 9]))
 
 function AB(kata) {
     for (let i = 0; i < kata.length; i++) {
@@ -21,7 +21,7 @@ function AB(kata) {
     return false;
   }
 
-  console.log(AB('lane borrowed'));
+// console.log(AB('lane borrowed'));
 
 function jumlah(ar, an) {
     let nilai = an
@@ -38,6 +38,39 @@ function jumlah(ar, an) {
 }
 
 q = jumlah([1, 5 , 6 ,2], 7)
-console.log(q)
+// console.log(q)
+
+
+function max(arr) {
+    let maxSum= arr[0];
+    let cSum = arr[0];
+    let sI = 0;
+    let eI = 0;
+    let CSI = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = arr[i];
+        
+        if(cSum + num > num){
+            cSum += num;
+        } else {
+            cSum = num
+            CSI = i
+        }
+
+        if(cSum >maxSum){
+            maxSum = cSum;
+            sI =CSI;
+            eI=i
+        }
+    }
+
+    return [arr.slice(sI, eI +1), maxSum]
+}
+
+let iA= [-2,3,4,-1,-2,1,5,3,-10, 5];
+let out = max(iA)
+console.log(out)
+
 
 

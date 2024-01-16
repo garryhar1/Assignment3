@@ -7,8 +7,8 @@ function DG(ar) {
     return true
   }
   
-// console.log(DG([1, 3, 5, 7]))
-// console.log(DG([1, 3, 5, 6, 7, 9]))
+console.log(DG([1, 3, 5, 7]))
+console.log(DG([1, 3, 5, 6, 7, 9]))
 
 function AB(kata) {
     for (let i = 0; i < kata.length; i++) {
@@ -21,13 +21,13 @@ function AB(kata) {
     return false;
   }
 
-// console.log(AB('lane borrowed'));
+console.log(AB('lane borrowed'));
 
 function jumlah(ar, an) {
     let nilai = an
     let kosong =[];
     for (let i = 0; i < ar.length; i++) {
-        for (let j = 0; j < ar.length; j++) {
+        for (let j = i+1; j < ar.length; j++) {
             if (ar[i] + ar[j] === an) {
                 kosong.push([ar[i], ar[j]])
             }   
@@ -37,8 +37,8 @@ function jumlah(ar, an) {
     
 }
 
-q = jumlah([1, 5 , 6 ,2], 7)
-// console.log(q)
+q = jumlah([2, 1 , 4 ,3], 5)
+console.log(q)
 
 
 function max(arr) {
